@@ -1,5 +1,6 @@
+package sort;
 
-public class Seletion_sort {
+public class Stack {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
