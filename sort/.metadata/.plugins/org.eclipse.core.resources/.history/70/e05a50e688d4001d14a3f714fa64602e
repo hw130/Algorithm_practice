@@ -1,5 +1,5 @@
 package sort;
-/*
+
 int number = 10;
 int[] data = {1,10,5,8,7,6,4,3,2,9};
 
@@ -36,4 +36,4 @@ public class quick_sort {
 
 	}
 
-} */
+}
