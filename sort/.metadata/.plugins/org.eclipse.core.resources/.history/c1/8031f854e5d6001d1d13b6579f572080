@@ -8,13 +8,13 @@ public class selection_sort {
 		int i, j, min, index = 0, temp;
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
-		int [] array = new int[a];
+		int [] array = {};
 		for(i = 0; i < a; i++) {
 			array[i] = scan.nextInt();
 		}
-		for(i = 0; i < a; i++) {
+		for(i = 0; i < 10; i++) {
 			min = 9999;
-			for(j = i; j < a; j++) {
+			for(j = i; j < 10; j++) {
 				if(min > array[i]) {
 					min = array[i];
 					index = j;
@@ -24,7 +24,7 @@ public class selection_sort {
 			array[i] = array[index];
 			array[index] = temp;
 		}
-		for(i = 0; i < a; i++) {
+		for(i = 0; i < 10; i++) {
 			System.out.println(array[i]);
 		}
 
