@@ -14,7 +14,7 @@ public class Average {
 			arr[i] = scan.nextInt();
 		}
 		
-		for(int i = 1; i <= num; i++) {
+		for(int i = 0; i < num; i++) {
 			for(int j = 0; j < num - i; j++) {
 				if(arr[j] > arr[j+1]) {
 					temp = arr[j];
@@ -29,7 +29,12 @@ public class Average {
 		avg = sum / num;
 		System.out.println("평균: %d" + avg);
 		
-		center = num / 2;
+		if(num % 2 == 0) {
+			center = num / 2;
+		} else {
+			center = (num / 2) + 1;
+		}
+		
 		System.out.println("중앙값: %d" + arr[center]);
 		
 		
