@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Cutline {
 
 	public static void main(String[] args) {
-		int i, j, num,a, temp;
+		int i, j, num,a, temp, b;
 		
 		Scanner scan = new Scanner(System.in);
 		num = scan.nextInt();
@@ -18,8 +18,8 @@ public class Cutline {
 		}
 		
 		for(i = 0; i < num; i++) {
-			for(j = 0; j < num - i - 1; j++) {
-				if(arr[j] < arr[j + 1]) {
+			for(j = 0; j = num - i; j++) {
+				if(arr[j] > arr[j + 1]) {
 					temp = arr[j];
 					arr[j] = arr[j+1];
 					arr[j+1] = temp;
@@ -27,7 +27,7 @@ public class Cutline {
 			}
 		}
 		
-		System.out.println(arr[a - 1]);
+		temp = array[0];
 	}
 
 }
