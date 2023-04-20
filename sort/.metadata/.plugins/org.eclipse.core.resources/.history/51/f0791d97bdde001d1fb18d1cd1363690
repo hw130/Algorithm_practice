@@ -29,8 +29,7 @@ class Graph {
 public class dfs {
 
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,5,6,7,8,9};
-		int temp = 0;
+		// TODO Auto-generated method stub
 
 	}
 
