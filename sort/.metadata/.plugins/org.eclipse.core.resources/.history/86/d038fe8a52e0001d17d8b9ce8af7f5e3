@@ -1,7 +1,6 @@
 package sort;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 class Queue<T> {
 	
@@ -30,7 +29,6 @@ class Graph {
 public class dfs {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
 		int[] arr = {1,2,3,4,5,6,7,8,9};
 		int temp = 0;
 
