@@ -2,7 +2,6 @@ package sort;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Stack;
 
 class Queue<T> {
 	
@@ -25,35 +24,6 @@ class Graph {
 			nodes[i] = new Node(i);
 		}
 		
-	}
-	void addEdge(int i1, int i2) {
-		Node n1 = nodes[i1];
-		Node n2 = nodes[i2];
-		if(!n1.adjacent.contains(n2)) {
-			n1.adjacent.add(n2);
-		}
-		if(!n2.adjacent.contains(n1)) {
-			n2.adjacent.add(n1);
-		}
-	}
-	void dfs() {
-		dfs(0);
-	}
-	void dfs(int index) {
-		Node root = nodes[index];
-		Stack<Node> stack = new Stack<Node>();
-		stack.push(root);
-		root.marked = true; //stack에 push 됐다고 표
-		while(!stack.isEmpty()) {
-			Node r = stack.pop();
-			for(Node n : r.adjacent) {
-				if(n.marked == false) {
-					n.marked = true;
-					stack.push(n);
-				}
-			}
-			visit(r);
-		}
 	}
 }
 
