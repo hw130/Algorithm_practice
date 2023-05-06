@@ -65,7 +65,7 @@ class Graph {
 			for(Node n: r.adjacent) {
 				if(n.marked = false) {
 					n.marked = true;
-					queue.enqueue(n);	
+					queue.enqueue(n);
 				}
 			}
 		}
