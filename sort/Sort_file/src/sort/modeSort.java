@@ -1,26 +1,25 @@
 package sort;
 
-public class modeSort {
-	public class void quickSort(int[] arr, int start, int end) {
-		if(start >= end) return;
-		int pivot = start;
-		int left = start + 1;
-		int right = end;
-		while(left <= right) {
-			while(left <= right && arr[left] <= arr[pivot]) left ++;
-			while(right > start && arr[right] >= arr[pivot]) right --;
-			if(left >= right) {
-				int temp = arr[pivot];
-				arr[pivot] = arr[right];
-				arr[right] = temp;
-			} else {
-				int temp = arr[pivot];
-				arr[pivot] = arr[left];
-				arr[left] = temp;
-			}
-		}
-		quickSort(arr, left, right - 1);
-		quickSort(arr, right + 1, end);
-	}
-
+class Solution {
+    public int solution(int[] array) {
+        int answer = array[0];
+        int max = 0; int frequent[] = new int[1000];
+        
+        for(int i = 0; i < array.length; i++) {
+            frequent[array[i]]++;
+            
+            if(max < frequent[array[i]]) {
+                max = frequent[array[i]];
+                answer = array[i];
+            }
+        }
+        
+        int temp = 0; // 여러 개인 지
+        for(int j = 0; j < 1000; j++) {
+            if(max == frequent[j]) temp++;
+            if(temp > 1) answer = -1;
+        }
+        
+        return answer;
+    }
 }
